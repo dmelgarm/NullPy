@@ -127,6 +127,13 @@ def svdanalysis(misfit=False,plots=False):
     
 
 def neu2d(n,e,u):
+    '''
+    Convert n,e,u numpy vectors into a single vector ordered like e1,n1,u1,e2,
+    n2,u2 and so on.
+    
+    Usage:
+        d=neu2d(n,e,u)
+    '''
     from numpy import arange,zeros
     i=arange(n.size)
     d=zeros(n.size*3,)
